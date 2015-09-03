@@ -1,9 +1,11 @@
 package com.valentine.yama;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.parse.Parse;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +14,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, "eX4tyHBF7yjbN5tPqmbugnu6l9nonJIKLvvMXeI6", "hhfIkPjG0XjiqSktL3WskGnASiPRsxFnuZqWM8Tx");
+
     }
 
     @Override
