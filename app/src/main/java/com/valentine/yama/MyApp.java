@@ -3,7 +3,6 @@ package com.valentine.yama;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 /**
@@ -19,8 +18,5 @@ public class MyApp extends android.app.Application{
         ParseUser.enableAutomaticUser();
         ParseACL defaultACL = new ParseACL();
 
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
 }
 }

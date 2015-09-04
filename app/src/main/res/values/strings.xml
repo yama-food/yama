@@ -1,7 +1,14 @@
 <resources>
+
     <string name="app_name">Yama</string>
     <string name="username">Username:</string>
+    <string name="password_label">Password:</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_register">Register</string>
+    <string name="title_activity_login">Login</string>
+    <string name="dont_have_an_account_label">SIGNUP</string>
+    <string name="sign_in_label">LOGIN</string>
+
+
 </resources>
