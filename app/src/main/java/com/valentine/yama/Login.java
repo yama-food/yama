@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -16,12 +17,14 @@ import com.parse.ParseUser;
 public class Login extends Activity {
     private EditText mUsernameField;
     private EditText mPasswordField;
+    private TextView  mErrorField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mErrorField = (TextView) findViewById(R.id.error_messages);
         mUsernameField = (EditText) findViewById(R.id.login_username);
         mPasswordField = (EditText) findViewById(R.id.login_password);
     }
