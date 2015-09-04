@@ -1,25 +1,35 @@
 package com.valentine.yama;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.parse.Parse;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
-
+ Button mbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "eX4tyHBF7yjbN5tPqmbugnu6l9nonJIKLvvMXeI6", "hhfIkPjG0XjiqSktL3WskGnASiPRsxFnuZqWM8Tx");
+    }
+    protected void  OnClickButtonListener(){
+        mbtn=(Button)findViewById(R.id.btn);
+        mbtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("Register");
+                        startActivity(intent);
+                    }
+                }
+        );
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -35,7 +35,7 @@
                 android:id="@+id/register_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="100"
                 android:inputType="text" >
 
                 <requestFocus />
@@ -50,26 +50,29 @@
                 android:id="@+id/register_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="100"
                 android:inputType="textPassword" />
 
             <Button
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:onClick="showLogin"
+                android:text="Log In!" />
+
+            <Button
                 android:id="@+id/sign_up"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:onClick="register"
+                android:textSize="17sp"
                 android:text="Sign Up" />
+
+
+
         </LinearLayout>
-
-        <Button
-            android:id="@+id/signInButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:onClick="showLogin"
-            android:text="Already Have An Account? Log In!" />
-
     </LinearLayout>
 
 
