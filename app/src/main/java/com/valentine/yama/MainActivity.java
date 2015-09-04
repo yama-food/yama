@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.parse.ParseAnonymousUtils;
 import com.parse.ParseUser;
 
 
@@ -18,11 +19,29 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        if(currentUser == null){
-            Intent intent = new Intent(this, Login.class);
+        // Determine whether the current user is an anonymous user
+        if (ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())) {
+            // If user is anonymous, send the user to LoginSignupActivity.class
+            Intent intent = new Intent(MainActivity.this,
+                    Login.class);
             startActivity(intent);
             finish();
+        } else {
+            // If current user is NOT anonymous user
+            // Get current user data from Parse.com
+            ParseUser currentUser = ParseUser.getCurrentUser();
+            if (currentUser != null) {
+                // Send logged in users to Welcome.class
+                Intent intent = new Intent(MainActivity.this, Welcome.class);
+                startActivity(intent);
+                finish();
+            } else {
+                // Send user to LoginSignupActivity.class
+                Intent intent = new Intent(MainActivity.this,
+                        Login.class);
+                startActivity(intent);
+                finish();
+            }
         }
 
 
