@@ -69,7 +69,11 @@ public class Login extends Activity {
             }
         });
     }
-
+    public void showRegistration(View v) {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
