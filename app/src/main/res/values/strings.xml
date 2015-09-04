@@ -9,6 +9,7 @@
     <string name="title_activity_login">Login</string>
     <string name="dont_have_an_account_label">SIGNUP</string>
     <string name="sign_in_label">LOGIN</string>
+    <string name="title_activity_welcome">Welcome</string>
 
 
 </resources>
