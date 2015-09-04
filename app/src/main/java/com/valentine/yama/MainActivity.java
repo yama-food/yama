@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.parse.ParseUser;
+
 
 public class MainActivity extends ActionBarActivity {
  Button mbtn;
@@ -15,6 +17,14 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if(currentUser == null){
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
+            finish();
+        }
+
 
     }
     protected void  OnClickButtonListener(){
