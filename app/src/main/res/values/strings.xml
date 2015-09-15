@@ -12,5 +12,10 @@
     <string name="action_logout">LOG OUT</string>
     <string name="title_activity_welcome">Welcome</string>
 
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_id">548086758679006</string>
+
 
 </resources>
