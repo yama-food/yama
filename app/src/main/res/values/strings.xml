@@ -11,6 +11,8 @@
     <string name="sign_in_label">LOG IN</string>
     <string name="action_logout">LOG OUT</string>
     <string name="title_activity_welcome">Welcome</string>
+    <string name="LogoutBtn">Log Out</string>
+    <string name="Welcome">Welcome!</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
