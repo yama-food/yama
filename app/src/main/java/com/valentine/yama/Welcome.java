@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 import com.parse.ParseUser;
 
@@ -44,10 +46,10 @@ Button logout;
             }
         });
 
-        final Button yama = (Button) findViewById(R.id.yama);
-        button.setOnClickListener(new View.OnClickListener() {
+       yama = (Button) findViewById(R.id.yama);
+        yama.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-              Intent intent =new Intent(welcome. this, MainActivity.class)
+              Intent intent =new Intent(welcome.this, MainActivity.class);
                         startActivity(intent);
             }
         });
