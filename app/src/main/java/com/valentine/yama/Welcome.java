@@ -14,6 +14,7 @@ import com.parse.ParseUser;
 
 public class Welcome extends Activity {
 Button logout;
+    Button yama;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,6 @@ Button logout;
 
         // Locate Button in welcome.xml
         logout = (Button) findViewById(R.id.logout);
-
         // Logout Button Click Listener
         logout.setOnClickListener(new View.OnClickListener() {
 
@@ -43,6 +43,17 @@ Button logout;
                 finish();
             }
         });
+
+        final Button yama = (Button) findViewById(R.id.yama);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+              Intent intent =new Intent(welcome. this, MainActivity.class)
+                        startActivity(intent);
+            }
+        });
+
+
+
     }
 
     @Override
