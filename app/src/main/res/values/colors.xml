@@ -2,4 +2,6 @@
 <resources>
     <color name="red">#FF0000</color>
     <color name="Fuchsia">#FF00FF</color>
+    <color name="primary">#E64A19</color>
+    <color name="accent">#7C4DFF</color>
 </resources>
