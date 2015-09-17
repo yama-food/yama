@@ -71,7 +71,10 @@ public class Neighborhood extends Activity {
             for (ParseObject location : ob) {
                 adapter.add((String) location.get("name"));
             }
-
+            // Binds the Adapter to the ListView
+            listview.setAdapter(adapter);
+            // Close the progressdialog
+            mProgressDialog.dismiss();
         }
     }
 }
