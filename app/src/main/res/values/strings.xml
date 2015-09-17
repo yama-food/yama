@@ -11,6 +11,7 @@
     <string name="sign_in_label">LOG IN</string>
     <string name="action_logout">LOG OUT</string>
     <string name="title_activity_welcome">Welcome</string>
+    <string name="title_activity_neighborhood">Neighborhood</string>
 
 
 </resources>

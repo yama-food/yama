@@ -42,7 +42,7 @@ public class Login extends Activity {
             @Override
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    Intent intent = new Intent(Login.this, Neighborhood.class);
                     startActivity(intent);
                     finish();
                 } else {
