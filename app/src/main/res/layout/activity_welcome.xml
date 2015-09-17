@@ -9,8 +9,19 @@
                 tools:context="com.valentine.yama.Welcome">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="@string/title_activity_welcome"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="continue to app"
+        android:id="@+id/yama"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="110dp" />
 
 </RelativeLayout>
