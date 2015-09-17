@@ -51,18 +51,27 @@ public class Neighborhood extends Activity {
         }
 
         @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        // Create a progressdialog
-        mProgressDialog = new ProgressDialog(Neighborhood.this);
-        // Set progressdialog title
-        mProgressDialog.setTitle("loading locations");
-        // Set progressdialog message
-        mProgressDialog.setMessage("Loading...");
-        mProgressDialog.setIndeterminate(false);
-        // Show progressdialog
-        mProgressDialog.show();
-    }
-    }
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mProgressDialog = new ProgressDialog(Neighborhood.this);
+            mProgressDialog.setTitle("loading locations");
+            mProgressDialog.setMessage("Loading...");
+            mProgressDialog.setIndeterminate(false);
+            mProgressDialog.show();
+        }
 
+        @Override
+        protected void onPostExecute(Void result) {
+            // Locate the listview in listview_main.xml
+            listview = (ListView) findViewById(R.id.listview);
+            // Pass the results into an ArrayAdapter
+            adapter = new ArrayAdapter<String>(Neighborhood.this,
+                    R.layout.activity_neighborhood);
+            // Retrieve object "location" from Parse.com database
+            for (ParseObject location : ob) {
+                adapter.add((String) location.get("name"));
+            }
+
+        }
+    }
 }
