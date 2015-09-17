@@ -20,7 +20,7 @@ Button place;
 
         place.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(Welcome.this, NeighborhoodsMain.class));
+                startActivity(new Intent(Welcome.this, Neighborhood.class));
             }
         });
     }

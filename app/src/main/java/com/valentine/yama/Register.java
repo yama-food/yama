@@ -42,7 +42,7 @@ public class Register extends Activity {
             @Override
             public void done(ParseException e) {
                 if (e == null) {
-                    Intent intent = new Intent(Register.this, MainActivity.class);
+                    Intent intent = new Intent(Register.this, Neighborhood.class);
                     startActivity(intent);
                     finish();
                 } else {
